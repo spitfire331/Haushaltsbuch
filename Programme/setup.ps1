@@ -48,10 +48,7 @@ if (-not $pythonPath) {
 #}
 
 # Benutzer auffordern, den Pfad zur requirements.txt-Datei auszuwählen
-$reqPath = Select-Folder -message "Bitte waehlen Sie den Ordner Programme aus, wo die Datei requirements.txt enthalten ist."
-if (-not $reqPath) {
-    Write-Host "Kein Pfad ausgewählt. Skript wird beendet."
-    exit
+$reqPath = $PSScriptRoot
 }
 #$reqPath = Select-File -message "Bitte wählen Sie die requirements.txt-Datei aus" -initialDirectory $venvPath
 #if (-not $reqPath) {
